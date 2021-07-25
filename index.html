@@ -1,26 +1,92 @@
 <!--
  * @Descripttion: 
  * @Date: 2021-07-25 18:32:58
- * @LastEditTime: 2021-07-25 19:56:23
+ * @LastEditTime: 2021-07-25 21:04:38
 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-      <div class="flex-shrink-0">
-        <img class="h-12 w-12" src="./favicon.svg" alt="ChitChat Logo">
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <main class="p-4 bg-gray-50 min-h-screen">
+    <div class="max-w-screen-xl mx-auto bg-white p-8 rounded-lg shadowm-2xl">
+      <h2 class="text-3xl my-6">评论</h2>
+      <form action="" class="grid">
+        <textarea name="comment" id="" cols="30" rows="10" placeholder="请输入你的评论"
+          class="bg-gray-50 p-2 rounded"></textarea>
+        <fieldset class="py-4">
+          <input type="submit" value="评论" class="px-4 py-1 bg-blue-600 rounded text-white">
+          <input type="reset" value="取消" class="px-4 py-1 bg-white rounded border ml-3">
+        </fieldset>
+      </form>
+      <div class="border-b border-gray-300 my-2 mb-4"></div>
       <div>
-        <div class="text-xl font-medium text-black">ChitChat</div>
-        <p class="text-gray-500">You have a new message!</p>
+        <div class="flex">
+          <!-- 即使在 public 文件夹下，也需要使用 / 绝对路径引用它下面的文件，省略 public -->
+          <img src="/images/chainsawMan.jpg" alt="" class="w-12 h-12 mr-4 rounded-full">
+          <div>
+            <p>ChainsawMan</p>
+            <p class="text-gray-600 text-sm">2小时之前</p>
+          </div>
+          <!-- 菜单靠右对齐 -->
+          <span class="ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            </svg>
+          </span>
+        </div>
+        <p class="text-gray-600 py-4">
+          哇！这篇文章真是写的太好啦！受到很大的启发，希望博主能够再接再厉，产出越来越多，越来越好的文章！凑字数，字数，字数 ...
+        </p>
+        <!-- 回复 -->
+        <div class="pl-8 border-l-2 border-gray-200">
+          <div class="flex">
+            <img src="/images/goodWoman.png" alt="" class="w-12 h-12 mr-4 rounded-full">
+            <div>
+              <p>GoodWoman</p>
+              <p class="text-gray-600 text-sm">2 小时之前</p>
+            </div>
+            <span class="ml-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+              </svg>
+            </span>
+          </div>
+          <p class="text-gray-600 py-4">
+            赞！
+          </p>
+          <div class="flex">
+            <img src="/images/badWoman.png" alt="" class="w-12 h-12 mr-4 rounded-full">
+            <div>
+              <p>BadWoman</p>
+              <p class="text-gray-600 text-sm">2 小时之前</p>
+            </div>
+            <span class="ml-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+              </svg>
+            </span>
+          </div>
+          <p class="text-gray-600 py-4">
+            这是一篇非常长的长篇大论，这篇文章写的非常好，无论是技术点还是理论点，都非常的好，而且主题分明，每一个点都有自己的解释，这篇文章的主题是：TailwindCss 的使用，真是非常好的文章。
+          </p>
+        </div>
+        <button class="pt-4 pb-10 text-blue-600">回复</button>
       </div>
     </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
